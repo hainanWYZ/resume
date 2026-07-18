@@ -1,5 +1,5 @@
 import { ArrowUp, Briefcase, Code, Home, User } from "lucide-react";
-import bgImage from "@/assets/preview.jpg";
+
 
 import {
   Sidebar,
@@ -49,7 +49,7 @@ export function AppSidebar() {
       className={`${"retro"} border-r-4 border-foreground dark:border-ring bg-none!`}
       style={
         {
-          "--sidebar-bg-image": `url(${bgImage})`,
+          "--sidebar-bg-image": `url(/resume/src/assets/preview.jpg)`,
         } as React.CSSProperties
       }
     >

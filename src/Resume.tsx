@@ -40,7 +40,7 @@ const Resume = () => {
             transition={{ duration: 0.8 }}
             className="text-center border-[#737373] py-12 flex flex-col items-center justify-center gap-6"
             style={{
-              backgroundImage: "url(/src/assets/pixelbg.png)",
+              backgroundImage: "url(/resume/src/assets/pixelbg.png)",
               backgroundSize: "cover",
               backgroundPosition: "left",
             }}
