@@ -5,6 +5,7 @@ import { Avatar, AvatarImage } from "@/components/ui/8bit/avatar";
 import { AvatarTip } from "@/components/ui/8bit/avatar-tip";
 import avatar from "@/assets/avatar.png";
 import avatar2 from "@/assets/avatar2.jpg";
+import pixelbg from "@/assets/pixelbg.png";
 import { Card, CardContent } from "@/components/ui/8bit/card";
 import { PixelBackground } from "@/components/ui/8bit/pixel-background";
 import PixelBorder from "./components/ui/8bit/pixel-border";
@@ -40,7 +41,7 @@ const Resume = () => {
             transition={{ duration: 0.8 }}
             className="text-center border-[#737373] py-12 flex flex-col items-center justify-center gap-6"
             style={{
-              backgroundImage: "url(/resume/src/assets/pixelbg.png)",
+              backgroundImage: `url(${pixelbg})`,
               backgroundSize: "cover",
               backgroundPosition: "left",
             }}
