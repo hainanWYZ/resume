@@ -2,7 +2,7 @@ import { type VariantProps, cva } from "class-variance-authority";
 
 import { cn } from "@/lib/utils";
 
-import { Badge as ShadcnBadge } from "@/components/ui/badge";
+import { Badge as ShadcnBadge, type BadgeProps } from "@/components/ui/badge";
 
 export const badgeVariants = cva("", {
   variants: {
@@ -23,8 +23,7 @@ export const badgeVariants = cva("", {
 });
 
 export interface BitButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof badgeVariants> {
+  extends BadgeProps, VariantProps<typeof badgeVariants> {
   asChild?: boolean;
 }
 
@@ -45,7 +44,7 @@ function Badge({
       c.startsWith("bg-") ||
       c.startsWith("border-") ||
       c.startsWith("text-") ||
-      c.startsWith("rounded-")
+      c.startsWith("rounded-"),
   );
 
   // Container should accept all non-visual utility classes (e.g., size, spacing, layout)
@@ -56,7 +55,7 @@ function Badge({
         c.startsWith("border-") ||
         c.startsWith("text-") ||
         c.startsWith("rounded-")
-      )
+      ),
   );
 
   return (
@@ -68,7 +67,7 @@ function Badge({
           "rounded-none",
           "w-full",
           font !== "normal" && "retro",
-          visualClasses
+          visualClasses,
         )}
         variant={variant}
       >
@@ -80,7 +79,7 @@ function Badge({
         className={cn(
           "-left-1.5 absolute inset-y-[4px] w-1.5",
           color,
-          visualClasses
+          visualClasses,
         )}
       />
       {/* Right pixel bar */}
@@ -88,7 +87,7 @@ function Badge({
         className={cn(
           "-right-1.5 absolute inset-y-[4px] w-1.5",
           color,
-          visualClasses
+          visualClasses,
         )}
       />
     </div>

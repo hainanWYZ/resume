@@ -9,7 +9,6 @@ import { Card, CardContent } from "@/components/ui/8bit/card";
 import { PixelBackground } from "@/components/ui/8bit/pixel-background";
 import PixelBorder from "./components/ui/8bit/pixel-border";
 import { Separator } from "./components/ui/8bit/separator";
-import { Button } from "./components/ui/8bit/button";
 import "./components/ui/8bit/styles/retro.css";
 import Timeline3 from "./components/ui/8bit/blocks/timeline3";
 import { useState } from "react";
@@ -24,7 +23,7 @@ const Resume = () => {
       badge: "Done",
     },
   ];
-  const [events, setEvents] = useState(projects);
+  const [events] = useState(projects);
   return (
     <div className="min-h-screen bg-black text-white font-mono retro p-4 relative z-0">
       <PixelBackground />

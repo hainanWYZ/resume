@@ -1,5 +1,3 @@
-import React from "react";
-
 const PixelBorder = () => {
   return (
     <div className="fixed inset-0 pointer-events-none z-50 p-4">
